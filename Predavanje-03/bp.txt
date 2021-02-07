@@ -1,0 +1,3 @@
+1 NF , nema vise vrijednosti u jednu celiju. Ime posebno, Prezime posebno.
+2 NF , ne smije da bude zavisnost izmedju atributa i dijela kljuca. pravi se nova tabela. 
+3 NF , atributi zavise samo od kljuca, od drugih atributa ne. 
