@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Music store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" href="/bands">Bands</a>
+          <a class="nav-link" href="/pricing">Pricing</a>
+          <a class="nav-link" href="/about-us">About us</a>
+        </div>
+      </div>
+    </div>
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+  </nav>
+    <h1>All bands</h1>
+    <a href="/blog/bands" class="btn btn-primary"> <--See all bands</a>
+    <div class="card" style="width: 18rem;">
+        <img src="{{band.image}}" class="card-img-top" alt="Band image">
+        <div class="card-body">
+        <h5 class="card-title">{{band.name}}</h5>
+        {% if band.can_rock %}
+            <p class="card-text">This band can rock!</p>   
+        {% else %}
+            <p class="card-text">This band can't rock!</p>    
+        {% endif %}
+        <p class="card-text">{{band.description}}</p>    
+        </div>
+    </div>
+{% endblock %}
