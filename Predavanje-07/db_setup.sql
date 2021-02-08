@@ -6,4 +6,3 @@ ALTER ROLE myblog_adminuser SET timezone TO 'UTC';
 GRANT ALL PRIVILEGES ON DATABASE myblogdbname TO myblog_adminuser;
 
 
-#47:46
