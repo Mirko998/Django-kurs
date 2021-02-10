@@ -10,4 +10,4 @@ class SnippetViewSet(viewsets.ModelViewSet):
     """
     queryset = Snippet.objects.all().order_by('-title')
     serializer_class = SnippetSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    #permission_classes = [permissions.IsAuthenticated]
